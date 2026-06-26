@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Exercise 3 — Local Git Workflow – Introduction to Git &amp; GitHub</title>
+<title>Final Exam – Introduction to Git &amp; GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -366,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Cheat Sheet</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../qmd/exam.html"> 
+    <a class="nav-link active" href="../qmd/exam.html" aria-current="page"> 
 <span class="menu-text">Final Exam</span></a>
   </li>  
 </ul>
@@ -393,13 +358,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
-  <li><a href="#part-a-create-the-repository" id="toc-part-a-create-the-repository" class="nav-link" data-scroll-target="#part-a-create-the-repository">Part A — Create the repository</a></li>
-  <li><a href="#part-b-first-commit-sample-metadata" id="toc-part-b-first-commit-sample-metadata" class="nav-link" data-scroll-target="#part-b-first-commit-sample-metadata">Part B — First commit: sample metadata</a></li>
-  <li><a href="#part-c-more-commits-documenting-analysis-steps" id="toc-part-c-more-commits-documenting-analysis-steps" class="nav-link" data-scroll-target="#part-c-more-commits-documenting-analysis-steps">Part C — More commits: documenting analysis steps</a></li>
-  <li><a href="#part-d-inspect-changes-with-diff" id="toc-part-d-inspect-changes-with-diff" class="nav-link" data-scroll-target="#part-d-inspect-changes-with-diff">Part D — Inspect changes with diff</a></li>
-  <li><a href="#check-your-understanding" id="toc-check-your-understanding" class="nav-link" data-scroll-target="#check-your-understanding">Check your understanding</a></li>
-  <li><a href="#what-you-learned" id="toc-what-you-learned" class="nav-link" data-scroll-target="#what-you-learned">What you learned</a></li>
+  <li><a href="#introduction-to-git-github-final-exam" id="toc-introduction-to-git-github-final-exam" class="nav-link active" data-scroll-target="#introduction-to-git-github-final-exam">Introduction to Git &amp; GitHub — Final Exam</a></li>
+  <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before you start</a></li>
+  <li><a href="#take-the-exam" id="toc-take-the-exam" class="nav-link" data-scroll-target="#take-the-exam">Take the exam</a></li>
+  <li><a href="#after-the-exam" id="toc-after-the-exam" class="nav-link" data-scroll-target="#after-the-exam">After the exam</a></li>
   </ul>
 </nav>
     </div>
@@ -409,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Exercise 3 — Local Git Workflow</h1>
+<h1 class="title">Final Exam</h1>
 </div>
 
 
@@ -426,205 +388,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>Module 2 | ~35 minutes</strong></p>
-<hr>
-<section id="goal" class="level2">
-<h2 class="anchored" data-anchor-id="goal">Goal</h2>
-<p>Build a small, realistic project — <code>experiment-tracker</code> — and practice the core local Git workflow: <code>init</code> → <code>add</code> → <code>commit</code> → <code>log</code> → <code>diff</code>.</p>
-<p>This is the running example we will keep extending for the rest of the day.</p>
-<hr>
-</section>
-<section id="part-a-create-the-repository" class="level2">
-<h2 class="anchored" data-anchor-id="part-a-create-the-repository">Part A — Create the repository</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Downloads</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> experiment-tracker</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> experiment-tracker</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-a</span>     <span class="co"># confirm .git was created</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="part-b-first-commit-sample-metadata" class="level2">
-<h2 class="anchored" data-anchor-id="part-b-first-commit-sample-metadata">Part B — First commit: sample metadata</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> samples.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>sample_id,condition,replicate
-S01,control,1
-S02,control,2
-S03,treated,1
-S04,treated,2</code></pre>
-<p>Save and close: <code>Ctrl+X → Y → Enter</code></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status              <span class="co"># git sees the file but isn't tracking it</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add samples.csv</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status              <span class="co"># now it's staged</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"added sample metadata for 4 samples"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<section id="introduction-to-git-github-final-exam" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-git-github-final-exam">Introduction to Git &amp; GitHub — Final Exam</h2>
+<p>A 20-question multiple-choice exam covering everything from today’s course: concepts &amp; GitHub basics, local Git, branching &amp; history, and GitHub collaboration.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Click to see expected output of <code>git status</code> (before staging)
+<span class="screen-reader-only">Important</span>Exam window
 </div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<pre><code>On branch main
-
-No commits yet
-
-Untracked files:
-  (use "git add &lt;file&gt;..." to include in what will be committed)
-        samples.csv
-
-nothing added to commit but untracked files present (use "git add" to track)</code></pre>
-</div>
-</div>
-</div>
-<p><strong>Question:</strong> After <code>git add samples.csv</code>, you run <code>git status</code> again. Before checking the answer below — what do you think the wording changes to?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Click to reveal the answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<pre><code>On branch main
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached &lt;file&gt;..." to unstage)
-        new file:   samples.csv</code></pre>
-<p>“Untracked” became “Changes to be committed” — the file moved from the working directory into the staging area.</p>
-</div>
+<p><strong>Opens:</strong> Tuesday, 8 July 2025, 17:00 (Europe/Zurich) <strong>Closes:</strong> Tuesday, 15 July 2025, 23:59 (Europe/Zurich)</p>
+<p>The exam link will only accept submissions during this window. You have <strong>one attempt</strong>. Make sure you’re ready before you start.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="part-c-more-commits-documenting-analysis-steps" class="level2">
-<h2 class="anchored" data-anchor-id="part-c-more-commits-documenting-analysis-steps">Part C — More commits: documenting analysis steps</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> analysis_log.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Analysis Log</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 1 — Quality control</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Checked all 4 samples for read quality. All passed QC thresholds.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add analysis_log.md</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"added analysis log with QC step"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> analysis_log.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Append:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Step 2 — Normalization</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>Applied log2 normalization to raw counts before comparison.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add analysis_log.md</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"documented normalization step"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span>    <span class="co"># see all 3 commits</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="part-d-inspect-changes-with-diff" class="level2">
-<h2 class="anchored" data-anchor-id="part-d-inspect-changes-with-diff">Part D — Inspect changes with diff</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> analysis_log.md   <span class="co"># add a "Step 3 — Differential expression" section</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Before staging:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff               <span class="co"># working directory vs staging area</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>After staging:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add analysis_log.md</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff <span class="at">--staged</span>      <span class="co"># staging area vs last commit</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"documented differential expression step"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Compare your first and last commit:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span>             <span class="co"># note the two hashes</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> diff FIRST_HASH LAST_HASH</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-</section>
-<section id="check-your-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="check-your-understanding">Check your understanding</h2>
-<p><strong>Question:</strong> You ran <code>git diff</code> before staging and saw nothing printed, even though you definitely edited <code>analysis_log.md</code>. What did you forget?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Click to reveal the answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>You probably forgot to <strong>save the file</strong> in <code>nano</code> before running <code>git diff</code> — Git can only see what’s actually written to disk. (Or, less likely, you already ran <code>git add</code> for that change, which would move it from <code>git diff</code> into <code>git diff --staged</code> instead.)</p>
-</div>
-</div>
-</div>
-<p><strong>Question:</strong> What is the difference between <code>git diff</code> and <code>git diff --staged</code>?</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Click to reveal the answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<section id="before-you-start" class="level2">
+<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
 <ul>
-<li><code>git diff</code> → compares your <strong>working directory</strong> to the <strong>staging area</strong> (what you’ve changed but not yet staged).</li>
-<li><code>git diff --staged</code> → compares the <strong>staging area</strong> to the <strong>last commit</strong> (what will actually go into your next commit).</li>
+<li>Have your name and email ready — these are required to identify your submission</li>
+<li>You do <strong>not</strong> need any reference material, but the <a href="../qmd/cheatsheet.html">Cheat Sheet</a> covers everything fairly</li>
+<li>There is no time limit once you open the form, but don’t leave it open indefinitely — submit when done</li>
 </ul>
-<p>If you run <code>git add</code> on a file, it “moves” out of the first diff and into the second.</p>
+<hr>
+</section>
+<section id="take-the-exam" class="level2">
+<h2 class="anchored" data-anchor-id="take-the-exam">Take the exam</h2>
+<div style="text-align: center; margin: 2em 0;">
+<p><a href="REPLACE_WITH_FORMS_URL" target="_blank" class="btn btn-lg" style="background-color: #F05032; color: white; padding: 0.75em 2em; border-radius: 6px; text-decoration: none; font-weight: bold;"> Open the Exam (Microsoft Forms) </a></p>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The exam opens in a new tab. If you arrive before 8 July 17:00 or after 15 July, Microsoft Forms will tell you the form is not currently accepting responses — this is expected.</p>
 </div>
 </div>
 <hr>
 </section>
-<section id="what-you-learned" class="level2">
-<h2 class="anchored" data-anchor-id="what-you-learned">What you learned</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>What it does</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git init</code></td>
-<td>Create a repository</td>
-</tr>
-<tr class="even">
-<td><code>git status</code></td>
-<td>See what has changed</td>
-</tr>
-<tr class="odd">
-<td><code>git add &lt;file&gt;</code></td>
-<td>Stage a file</td>
-</tr>
-<tr class="even">
-<td><code>git commit -m "msg"</code></td>
-<td>Save a snapshot</td>
-</tr>
-<tr class="odd">
-<td><code>git log --oneline</code></td>
-<td>View history</td>
-</tr>
-<tr class="even">
-<td><code>git diff</code></td>
-<td>See unstaged changes</td>
-</tr>
-<tr class="odd">
-<td><code>git diff --staged</code></td>
-<td>See staged changes</td>
-</tr>
-</tbody>
-</table>
+<section id="after-the-exam" class="level2">
+<h2 class="anchored" data-anchor-id="after-the-exam">After the exam</h2>
+<p>Results are reviewed by the instructor after the window closes on 15 July. If you have questions about your result, contact <a href="mailto:deepak.tanwar@uzh.ch">deepak.tanwar@uzh.ch</a>.</p>
 
 
 </section>
